@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:f_ui_design_template/features/courses/widgets/courses_appbar.dart';
-
+import 'package:f_ui_design_template/features/courses/widgets/courses_focus.dart';
 import 'package:f_ui_design_template/ui/pages/flutter_course_page.dart';
 
 
@@ -18,7 +18,7 @@ class CoursesScreen extends StatelessWidget{
                 children: [
                   /// -- AppBar --
                   CoursesAppbar(),
-                  
+                  CoursesFocus(),
                   FlutterCoursePage()
                 ],
               )

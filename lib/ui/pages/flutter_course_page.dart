@@ -68,8 +68,8 @@ class FlutterCoursePage extends StatelessWidget {
     );
   }
 
-  Widget buildProjectList() {
-    return Container(
+  Expanded buildProjectList() {
+    return Expanded(
       child: ListView(
         padding: const EdgeInsets.all(12),
         children: <Widget>[
