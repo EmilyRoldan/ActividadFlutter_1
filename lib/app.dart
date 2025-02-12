@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:f_ui_design_template/bindings/general_bindings.dart';
 import 'package:f_ui_design_template/utils/theme/theme.dart';
-import 'package:f_ui_design_template/ui/pages/flutter_course_page.dart';
 import 'package:f_ui_design_template/features/courses/courses.dart';
 
 
