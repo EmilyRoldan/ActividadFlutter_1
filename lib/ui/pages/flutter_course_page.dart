@@ -6,7 +6,7 @@ class FlutterCoursePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [header(), buildModules()],
+      children: [header(), buildModules(), buildProjectList()],
     );
   }
 
@@ -141,7 +141,8 @@ Widget buildModules() {
 }
 
 Widget buildProjectList() {
-  return Expanded(
+  return SizedBox(
+    height: 500,
     child: ListView(
       padding: const EdgeInsets.all(12),
       children: <Widget>[
