@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
+import 'app.dart';
 
-import 'ui/pages/flutter_course_page.dart';
+Future<void> main() async {
+  // Widgets Binding
+  // final WidgetsBinding widgetsBinding =
+      WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
-  runApp(const MyApp());
-}
+  // -- GetX Local Storage
+  await GetStorage.init();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  // -- Await Splash until other items loaded
+  //FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Flutter course",
-      home: FlutterCoursePage(),
-    );
-  }
+  runApp(const App());
 }
