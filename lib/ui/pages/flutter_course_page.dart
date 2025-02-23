@@ -140,132 +140,134 @@ Widget buildModules() {
   );
 }
 
+
+
 Widget buildProjectList() {
-  return SizedBox(
-    height: 500,
-    child: ListView(
-      padding: const EdgeInsets.all(12),
+  return SingleChildScrollView(
+    padding: const EdgeInsets.all(12),
+    scrollDirection: Axis.vertical,
+    child: Column(
       children: <Widget>[
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 214, 213, 211),
-            border: Border.all(
-                color: const Color.fromARGB(255, 242, 240, 240), width: 1),
-            borderRadius: BorderRadius.circular(7),
-          ),
-          child: const Center(
-            child: Row(
-              children: [
-                Icon(Icons.folder, color: Colors.blueAccent),
-                const Text('  Sudoku'),
-                Spacer(flex: 2),
-                Icon(
-                  Icons.more_vert_rounded,
-                ),
-              ],
-            ),
+      Container(
+        height: 50,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 214, 213, 211),
+          border: Border.all(
+              color: const Color.fromARGB(255, 242, 240, 240), width: 1),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: const Center(
+          child: Row(
+            children: [
+              Icon(Icons.folder, color: Colors.blueAccent),
+               Text('  Sudoku'),
+              Spacer(flex: 2),
+              Icon(
+                Icons.more_vert_rounded,
+              ),
+            ],
           ),
         ),
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 214, 213, 211),
-            border: Border.all(
-                color: const Color.fromARGB(255, 242, 240, 240), width: 1),
-            borderRadius: BorderRadius.circular(7),
-          ),
-          child: const Center(
-            child: Row(
-              children: [
-                Icon(Icons.folder, color: Colors.blueAccent),
-                const Text('  Random user'),
-                Spacer(flex: 2),
-                /*3*/
-                Icon(
-                  Icons.more_vert_rounded,
-                ),
-              ],
-            ),
+      ),
+      Container(
+        height: 50,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 214, 213, 211),
+          border: Border.all(
+              color: const Color.fromARGB(255, 242, 240, 240), width: 1),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: const Center(
+          child: Row(
+            children: [
+              Icon(Icons.folder, color: Colors.blueAccent),
+               Text('  Random user'),
+              Spacer(flex: 2),
+              /*3*/
+              Icon(
+                Icons.more_vert_rounded,
+              ),
+            ],
           ),
         ),
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 214, 213, 211),
-            border: Border.all(
-                color: const Color.fromARGB(255, 242, 240, 240), width: 1),
-            borderRadius: BorderRadius.circular(7),
-          ),
-          child: const Center(
-            child: Row(
-              children: [
-                Icon(Icons.folder, color: Colors.blueAccent),
-                const Text('  Note Taking'),
-                Spacer(flex: 2),
-                /*3*/
-                Icon(
-                  Icons.more_vert_rounded,
-                ),
-              ],
-            ),
+      ),
+      Container(
+        height: 50,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 214, 213, 211),
+          border: Border.all(
+              color: const Color.fromARGB(255, 242, 240, 240), width: 1),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: const Center(
+          child: Row(
+            children: [
+              Icon(Icons.folder, color: Colors.blueAccent),
+               Text('  Note Taking'),
+              Spacer(flex: 2),
+              /*3*/
+              Icon(
+                Icons.more_vert_rounded,
+              ),
+            ],
           ),
         ),
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 214, 213, 211),
-            border: Border.all(
-                color: const Color.fromARGB(255, 242, 240, 240), width: 1),
-            borderRadius: BorderRadius.circular(7),
-          ),
-          child: const Center(
-            child: Row(
-              children: [
-                Icon(Icons.folder, color: Colors.blueAccent),
-                const Text('  Weather'),
-                Spacer(flex: 2),
-                /*3*/
-                Icon(
-                  Icons.more_vert_rounded,
-                ),
-              ],
-            ),
+      ),
+      Container(
+        height: 50,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 214, 213, 211),
+          border: Border.all(
+              color: const Color.fromARGB(255, 242, 240, 240), width: 1),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: const Center(
+          child: Row(
+            children: [
+              Icon(Icons.folder, color: Colors.blueAccent),
+               Text('  Weather'),
+              Spacer(flex: 2),
+              /*3*/
+              Icon(
+                Icons.more_vert_rounded,
+              ),
+            ],
           ),
         ),
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 214, 213, 211),
-            border: Border.all(
-                color: const Color.fromARGB(255, 242, 240, 240), width: 1),
-            borderRadius: BorderRadius.circular(7),
-          ),
-          child: const Center(
-            child: Row(
-              children: [
-                Icon(Icons.folder, color: Colors.blueAccent),
-                const Text('  Delivery App'),
-                Spacer(flex: 2),
-                /*3*/
-                Icon(
-                  Icons.more_vert_rounded,
-                ),
-              ],
-            ),
+      ),
+      Container(
+        height: 50,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 214, 213, 211),
+          border: Border.all(
+              color: const Color.fromARGB(255, 242, 240, 240), width: 1),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: const Center(
+          child: Row(
+            children: [
+              Icon(Icons.folder, color: Colors.blueAccent),
+               Text('  Delivery App'),
+              Spacer(flex: 2),
+              /*3*/
+              Icon(
+                Icons.more_vert_rounded,
+              ),
+            ],
           ),
         ),
-      ],
+      ),
+    ],
     ),
   );
 }

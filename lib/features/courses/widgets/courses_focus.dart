@@ -9,48 +9,96 @@ class CoursesFocus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return Column(
-      children: [
-        Text(
-          'Course Focus',
-          style: TextStyle(
-            color: dark ? TColors.black : TColors.white,
+    return Padding(
+      padding: EdgeInsets.symmetric(
+              horizontal: TSizes.defaultSpace,
+              vertical: TSizes.defaultSpace,
+            ),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: TSizes.sm,
+            ),
+            child: SizedBox(
+              width: double.infinity,
+              child: Text(
+                "Course focus",
+                style: Theme.of(context).textTheme.headlineMedium!.apply(
+                                color: dark ? TColors.white : TColors.black,
+                          ),
+              ),
+            ),
           ),
-        ),
-        SizedBox(height: TSizes.spaceBtwItems),
-        Row(
-          children: [
-            Column(
-              children: [
-                Text(
-                  'UI Development',
-                  style: TextStyle(
-                    color: dark ? TColors.black : TColors.white,
-                  ),
-                )
-              ],
-            ),
-            Column(
-              children: [
-                Text(
-                  'Architecture',
-                  style: TextStyle(
-                    color: dark ? TColors.black : TColors.white,
-                  ),
-                )
-              ],
-            ),
-            Column(children: [
-              Text(
-                'Desing',
-                style: TextStyle(
-                  color: dark ? TColors.black : TColors.white,
+          SizedBox(height: TSizes.spaceBtwItems),
+          Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    LinearProgressIndicator(
+                      value: 1,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: AlwaysStoppedAnimation<Color>(TColors.primary),
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems),
+                    Text(
+                      'UI Development',
+                      textAlign: TextAlign.left,
+                      style: Theme.of(context).textTheme.bodyLarge!.apply(
+                                  color: dark ? TColors.white : TColors.black,
+                            ),
+                    )
+                  ],
                 ),
-              )
-            ],),
-          ],
-        )
-      ],
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    LinearProgressIndicator(
+                      value: 1,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems),
+                    Text(
+                      'Architecture',
+                      textAlign: TextAlign.left,
+                      style: Theme.of(context).textTheme.bodyLarge!.apply(
+                                  color: dark ? TColors.white : TColors.black,
+                            ),
+                    )
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    LinearProgressIndicator(
+                      value: 0.65,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.yellow),
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems),
+                    Text(
+                      'Desing thinking Testing',
+                      textAlign: TextAlign.left,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.bodyLarge!.apply(
+                                  color: dark ? TColors.white : TColors.black,
+                            ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

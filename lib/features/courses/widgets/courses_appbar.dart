@@ -19,7 +19,7 @@ class CoursesAppbar extends StatelessWidget {
       color: TColors.primary,
       child: Column(
         children: [
-          SizedBox(height: TSizes.spaceBtwSections),
+          SizedBox(height: TSizes.md),
           Padding(
             padding: EdgeInsets.all(TSizes.defaultSpace),
             child: TAppBar(
